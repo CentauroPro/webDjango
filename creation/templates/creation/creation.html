@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Creaciones{% endblock %}
+
+{% block content %}
+<div class="home-sticky" id="content">
+  <h2 class="home-sticky-title">Manualidades</h2>
+
+  <div class="sticky-inner">
+    {% for project in manualidades %}
+    <aside class="home-sticky-post post has-post-thumbnail sticky">
+      <span class="post-image">
+        <a href="#">
+          {% load static %}
+          <img
+            width="502"
+            height="502"
+            src="{{project.image.url}}"
+            class="attachment-sticky size-sticky"
+            alt=""
+          />
+        </a>
+      </span>
+
+      <div class="inner">
+        <h3 class="entry-title">
+          <a href="#">{{project.title}}</a>
+        </h3>
+
+        <ul class="meta top">
+          <li class="time">
+            <a href="#">
+              <time class="post-date updated" datetime="{{ project.created|date:'Y-m-d' }}">{{ project.created|date:'F d, Y' }}</time>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

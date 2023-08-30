@@ -1,0 +1,424 @@
+{% extends 'core/base.html' %}
+{% block title  %}blog{% endblock  %}
+{% block content %}
+
+
+<div class="wrap full-wrap">
+    <div class="main-wrap">
+        <section class="main main-archive">
+
+            <article class="post result">
+                <div class="inner">
+                    <h1 class="searching">Galeria</h1>
+                    <p>Manitos Creativas</p>
+                </div>
+            </article>
+
+            <div class="loop">
+
+
+                <article class="post format-gallery post_format-post-format-gallery">
+
+
+                    <a href="#"
+                       title="Running through Chicago">
+                        <div class="part-gallery">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    {% load static %}
+                                    <li><span class="post-image"><img src="{%  static 'core/images/photo_2023-08-27_13-47-31.jpg' %}"
+                                                                      alt="Run-3"/></span></li>
+                                    <li><span class="post-image"><img src="{%  static 'core/images/photo_2023-08-27_13-47-52 (2).jpg' %}"
+                                                                      alt="Run-1"/></span></li>
+                                    <li><span class="post-image"><img src="{%  static 'core/images/photo_2023-08-27_13-47-52 (2).jpg' %}"
+                                                                      alt="Run-2"/></span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="Running through Chicago">
+                               Velaz para Primavera </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="Running through Chicago">
+                                    <time class="post-date updated" datetime="2015-02-01">Febrero 1, 2015</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">2
+                                    Contactanos</a></li>
+
+                            <li class="author-m post-tags">
+                                Por <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Maria G</a></span></span>
+                            </li>
+
+                        </ul>
+                        <div class="post-content">
+                            <p>¡Listo! Ahora tendrás tus propias velas aromáticas caseras. Recuerda encenderlas en una superficie segura y nunca dejes velas encendidas sin supervisión.
+
+                                Experimenta con diferentes aceites esenciales y colores para crear una variedad de velas aromáticas que te brinden momentos de relajación y disfrute.</p>
+                            <blockquote><p>"Siempre hay dos personas en cada manualidad : el creador y el espectador".
+                               <cite>Ansel Adams</cite></p></blockquote>
+                            <p>Agrega un toque único y personal a tus manualidades. Esto puede ser a través de colores, patrones, diseños o incluso mensajes. <a
+                                        href="{% url 'creation' %}"
+                                        class="more-link">Creaciones</a></p>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+
+                            <li class="cat post-tags">Visitanos: <a
+                                    href="{% url 'creation' %}">Creaciones</a>,
+                                <a href="{% url 'gallery' %}">Galeria</a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </article>
+
+
+                <article class="post format-link has-post-thumbnail post_format-post-format-link">
+
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="What a cute template">
+                                Duendes Otoño </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="What a cute template">
+                                    <time class="post-date updated" datetime="2014-11-06">Noviembre 6, 2014</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">0
+                                    Comentarios</a></li>
+
+                            <li class="author-m post-tags">
+                                Por <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Maria Guaman</a></span></span>
+                            </li>
+
+                        </ul>
+
+                        <div class="part-link">
+                            <a class="more-link" href="https://freehtml5.co" title="What a cute template"
+                               target="_self">Contactanos</a>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+                            <li class="cat post-tags">Visitanos: <a
+                                    href="{% url 'creation' %}">Creacioanes</a>,
+                                <a href="{% url 'gallery' %}"
+                                   rel="category tag">Galeria</a></li>
+
+                        </ul>
+
+                    </div>
+                </article>
+
+
+                <article class="post format-image has-post-thumbnail post_format-post-format-image">
+
+
+
+
+  		            <span class="post-image">
+  			  				<a href="#" title="Camper Van Fun">
+  			  				    <img width="916" height="611" src="{%  static 'core/images/duende1.jpg' %}"
+                                     class="attachment-desktop size-desktop" alt=""/>
+                            </a>
+
+  		            </span>
+
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="Camper Van Fun">
+                                Duende Properidad</a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="Camper Van Fun">
+                                    <time class="post-date updated" datetime="2014-10-06">Octubrer 6, 2014</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">0
+                                    Comentarios</a></li>
+
+                            <li class="author-m post-tags">
+                                Por <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Maria G.</a></span></span>
+                            </li>
+
+                        </ul>
+                        <div class="post-content">
+                            <p>Los duendes buenos, son muy amigables y velan por los humanos y animales que conviven con ellos, sin embargo tienen mala fama por ser traviesos, juguetones y esconder objetos preciados.. <a
+                                        href="#"
+                                        class="more-link">Creaciones</a></p>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+                            <li class="cat post-tags">Visitanos: <a
+                                    href="#">Creaciones</a>,
+                                <a href="#">Galeria</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </article>
+
+
+                <article class="post format-quote has-post-thumbnail post_format-post-format-quote">
+
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="A lovely Quote">
+                                Ingenio </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="A lovely Quote">
+                                    <time class="post-date updated" datetime="2014-10-01">Octubre 1, 2014</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">0
+                                    Comments</a></li>
+
+                            <li class="author-m post-tags">
+                                Por <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Maria G</a></span></span>
+                            </li>
+
+                        </ul>
+                        <div class="post-content">
+                            <blockquote class="content-quote">
+                                <p>El trabajo con Esfuerzo es satisfaccion </p>
+                                <cite>Maria Guaman</cite>
+                            </blockquote>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+                            <li class="cat post-tags">Visitanos: <a
+                                    href="#">Galeria</a>,
+                                <a href="#">Creaciones</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </article>
+
+
+                <!--<article class="post format-video has-post-thumbnail post_format-post-format-video">
+
+
+			        <span class="post-image post-video">
+                        <div class="fluid-width-video-wrapper" style="padding-top: 56.1%;"><iframe
+                                src="https://player.vimeo.com/video/33091687?portrait=0" frameborder="0" webkitallowfullscreen=""
+                                mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                    </span>
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="What a video">
+                                What a video </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="What a video">
+                                    <time class="post-date updated" datetime="2014-08-31">August 31, 2014</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">0
+                                    Comments</a></li>
+
+                            <li class="author-m post-tags">
+                                By <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Clare Smith</a></span></span>
+                            </li>
+
+                        </ul>
+                        <div class="post-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at risus at lacus laoreet
+                                mollis sed id elit. Integer bibendum lobortis velit, eleifend commodo dui facilisis nec.
+                                Aliquam mi sapien, ultrices a ultrices non, sodales ut diam. Fusce semper risus eu magna
+                                placerat pulvinar. Nullam ac odio non ligula semper auctor. Fusce semper risus eu magna
+                                placerat pulvinar. <a
+                                        href="#"
+                                        class="more-link">Read More</a></p>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+                            <li class="cat post-tags">Saved: <a
+                                    href="#">Blog</a>,
+                                <a href="#">Fitness</a>,
+                                <a href="#">Fun</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </article>-->
+
+
+                <article class="post has-post-thumbnail">
+
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="As an aside">
+                                Creatividad </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="As an aside">
+                                    <time class="post-date updated" datetime="2014-06-02">Junio 2, 2014</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">0
+                                    Comentarios</a></li>
+
+                            <li class="author-m post-tags">
+                                Por <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Maria Guaman</a></span></span>
+                            </li>
+
+                        </ul>
+                        <div class="post-content">
+                            <p style="text-align: center">La Innovacion y la Magia Nace Dentro de Ti.</p>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+                            <li class="cat post-tags">Visitanos: <a
+                                    href="#">Creaciones</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </article>
+
+                <article class="post has-post-thumbnail">
+
+
+
+
+  		            <span class="post-image">
+  			  				<a href="#" title="The Flower Shop">
+  			  				    <img width="916" height="611"
+                                     src="{%  static 'core/images/photo_2023-08-27_13-47-29.jpg' %}"
+                                     class="attachment-desktop size-desktop" alt=""/>
+                            </a>
+  		            </span>
+
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="The Flower Shop">
+                                Ositos Magicos </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="The Flower Shop">
+                                    <time class="post-date updated" datetime="2014-05-02">Mayo 2, 2014</time>
+                                </a></li>
+
+                            <li class="comments post-tags">
+                                <a href="#">0
+                                    Comentarios</a></li>
+
+                            <li class="author-m post-tags">
+                                Por <span class="vcard author post-author"><span class="fn"><a
+                                    href="#"
+                                    title="Posts by Clare Smith" rel="author">Maria G</a></span></span>
+                            </li>
+
+                        </ul>
+                        <div class="post-content">
+                            <p>En un mágico bosque encantado, donde la dulzura y la magia se entrelazan, existe un lugar especial conocido como "Las Delicias de Ositos Mágicos". Este encantador reino es el hogar de adorables ositos que poseen poderes mágicos y la capacidad de crear delicias que llenan de alegría a todos los que los visitan..</p>
+                            <blockquote><p>“a magia se mezcla con los sabores más deliciosos, creando momentos inolvidables de dulzura y amistad..”<cite>Maria Guaman</cite></p></blockquote>
+                            <p>Sumérgete en el dulce encanto del bosque mágico y descubre la alegría que brota de cada rincón en 'Las Delicias de Ositos Mágicos. <a
+                                        href="#"
+                                        class="more-link">Contactanos</a></p>
+                        </div>
+
+
+                        <ul class="meta bottom">
+
+                            <li class="cat post-tags">Visitanos: <a
+                                    href="#">Galeria</a>,
+                                <a href="#"
+                                   rel="category tag">Categorias</a></li>
+
+                        </ul>
+
+                    </div>
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div><!-- /main-wrap -->
+
+
+</div><!-- /wrap -->
+
+
+{% endblock  %}

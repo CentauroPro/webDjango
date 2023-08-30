@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% block title  %}Acerca de {% endblock  %}
+{% block content %}
+<div class="wrap full-wrap">
+    <div class="main-wrap">
+
+        <section class="main">
+            <article class="post page">
+
+                <div class="inner">
+                    <h1>Quien es</h1>
+                    <div class="post-content">
+                        {% load static %}
+                        <p><img class="size-full alignleft rounded" src="{%  static 'core/images/foto_perfil1.jpg' %}" alt="about-clare" width="300" height="300">
+                            Maria es una apasionada creadora y amante del arte en todas sus formas. Su corazón late con entusiasmo cada vez que se sumerge en el mundo de las manualidades. Desde una temprana edad, ha estado rodeada por la influencia de su familia de artesanos, lo que le ha permitido cultivar su creatividad de manera excepcional.
+
+                            Especializada en la creación de objetos únicos utilizando resina, parafina y silicona, Maria tiene un don para crear de una manera sorprendente. Sus obras muestran una amplia gama de emociones y estilos, desde piezas elegantes y modernas hasta creaciones nostálgicas y rústicas.</p>
+                        <p>Visita mis Creaciones?</p>
+                
+                        <p>
+                            <a target="_self" class="social twitter black" href="#"> Twitter </a>
+                            <a target="_self" class="social facebook black" href="#"> Facebook&nbsp;</a>
+                            <a target="_self" class="social instagram black" href="#">&nbsp;instagram&nbsp;</a>
+                            <a target="_self" class="social flickr black" href="#"> flickr&nbsp;</a>
+                        </p>
+
+                    </div>
+                </div>
+
+            </article>
+            <div class="border"></div>
+
+
+        </section>
+
+
+    </div><!-- /main-wrap -->
+
+
+</div><!-- /wrap -->
+
+
+{% endblock  %}
