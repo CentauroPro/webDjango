@@ -40,6 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'creation',
+    'blog',
+    'social',
+    'contact',
+    'home',
+    'season',
+    
 ]
 
 MIDDLEWARE = [
@@ -65,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.processor.context',
+                'season.processor.context',
+            
             ],
         },
     },
@@ -132,3 +141,16 @@ MEDIA_ROOT=os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    }
+}
+
+
+# email configuracion
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '3d671e2486ef60'
+EMAIL_HOST_PASSWORD = '9fc7072183efe4'
+EMAIL_PORT = '2525'

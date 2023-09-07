@@ -1,0 +1,77 @@
+{% extends 'core/base.html' %}
+{% block title %}blog{% endblock %} 
+{% block content %}
+  {% for blog in listBlogs %}
+    <div class="wrap full-wrap">
+      <div class="main-wrap">
+        <section class="main main-archive">
+          <article class="post result">
+            <div class="inner">
+              <h1 class="searching">Blog</h1>
+              <p>Manitos Creativas</p>
+            </div>
+          </article>
+          <div class="loop">
+            <article class="post format-gallery post_format-post-format-gallery">
+              <a href="#" title="Running through Chicago">
+                <div class="part-gallery">
+                  <div class="flexslider">
+                    <ul class="slides">
+                      {% load static %}
+                      <li>
+                        <span class="post-image"><img src="{{blog.image.url}}" alt="Run-3" /></span>
+                      </li>
+                      <li>
+                        <span class="post-image"><img src="{{blog.image.url}}" alt="Run-1" /></span>
+                      </li>
+                      <li>
+                        <span class="post-image"><img src="{{blog.image.url}}" alt="Run-2" /></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+              <div class="inner">
+                <h2 class="entry-title">
+                  <a href="#" title="Running through Chicago">{{blog.title}}</a>
+                </h2>
+                <ul class="meta top">
+                  <li class="time">
+                    <a href="#" title="Running through Chicago">
+                      <time class="post-date updated" datetime="2015-02-01">{{blog.publicationDate|date:"SHORT_DATE_FORMAT" }}</time>
+                    </a>
+                  </li>
+                  <li class="comments post-tags">
+                    <a href="#">{{blog.comments}}</a>
+                  </li>
+                  <li class="author-m post-tags">
+                    Por
+                    <span class="vcard author post-author">
+                      <span class="fn"><a href="#" title="Posts by Clare Smith" rel="author">{{blog.author }}</a></span>
+                    </span>
+                  </li>
+                </ul>
+                <div class="post-content">
+                  <p>{{blog.content}}</p>
+                  <blockquote>
+                    <p>{{blog.quote}}</p>
+                  </blockquote>
+                </div>
+                <ul class="meta bottom">
+                  <li class="cat post-tags">Visítanos:
+                    {% for category in blog.categories.all %}
+                      <a href="{% url 'category' category.id %}"> {{category.name}} {% if not forloop.last %},{% endif %}</a>
+                    {% endfor %}
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="post format-link has-post-thumbnail post_format-post-format-link">
+              <!-- Contenido del artículo de formato link -->
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

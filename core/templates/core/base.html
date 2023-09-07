@@ -47,40 +47,32 @@
                             <a href="{% url 'about' %}">Acerca de</a></li>
                         <li class="menu-item">
                             <a href="{% url 'tutorials' %}"></a>
-                            <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <a href="#">Cute</a></li>
-                                <li class="menu-item">
-                                    <a href="#">Fun</a></li>
-                                <li class="menu-item">
-                                    <a href="#">Fitness</a>
-                                </li>
-                            </ul>
+                    
                         </li>
                         <li class="menu-item">
-                            <a href="{% url 'gallery' %}">Galeria</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <a href="{% url 'gallery' %}">Single</a></li>
-                            </ul>
+                            <a href="{% url 'blog' %}">Blog</a>
+                            
                         </li>
                         <li class="menu-item">
                             <a href="{% url 'creation' %}">Creaciones</a></li>
                         <li class="menu-item">
                             <a href="{% url 'contact' %}">Contactos</a></li>
+
+
                         <li class="menu-inline menu-item">
-                            <a title="Twitter" href="http://twitter.com/fh5co">
+                           
+                            <a title="Twitter" href="{{URL_TWITTER}}">
                                 <i class="fa fa-twitter"></i><span class="i">Twitter</span>
                             </a></li>
                         <li class="menu-inline menu-item">
-                            <a title="Facebook" href="http://www.facebook.com/fh5co">
+                            <a title="Facebook" href= {{URL_FACEBOOK}}>
                                 <i class="fa fa-facebook"></i><span class="i">Facebook</span>
                             </a></li>
                         <li class="menu-inline menu-item">
-                            <a title="Flickr" href="#"><i class="fa fa-flickr"></i><span class="i">Flickr</span></a>
+                            <a title="Flickr" href="{{URL_FLICKR}}"><i class="fa fa-flickr"></i><span class="i">Flickr</span></a>
                         </li>
                         <li class="menu-inline menu-item">
-                            <a title="Instagram" href="#">
+                            <a title="Instagram" href="{{URL_INSTAGRAM}}">
                                 <i class="fa fa-instagram"></i><span class="i">Instagram</span>
                             </a>
                         </li>
@@ -89,8 +81,6 @@
             </div>
         </nav>
         <a href="#nav" class="menu-trigger"><i class="fa fa-bars"></i></a>
-
-        <a href="#topsearch" class="search-trigger"><i class="fa fa-search"></i></a>
 
     </div>
 
@@ -120,32 +110,29 @@
 
             </div>
         </div>
+        
         <div class="widget footer"><h4>Temporada</h4>
             <ul>
                 <li>
-                    <a href="#">Primavera</a>
+                    <a href="{{URL_PRIMAVERA}}">Primavera</a>
                 </li>
                 <li>
-                    <a href="#">Otoño</a>
+                    <a href="{{URL_NAVIDAD}}">Navidad</a>
                 </li>
                 <li>
-                    <a href="#">Navidad</a>
+                    <a href="{{URL_OTONO}}">Otoño</a>
                 </li>
-                <li>
-                    <a href="#">Invierno</a>
-                </li>
-                <li>
-                    <a href="#">Verano</a>
-                </li>
+               
             </ul>
         </div>
-        <div class="widget footer"><h4>Categories</h4>
+        
+        <div class="widget footer"><h4>Creaciones</h4>
             <ul>
                 <li class="cat-item cat-item-6">
                     <a href="{% url 'creation' %}" title="A cute little description would go in here">Duendes</a>
                 </li>
                 <li class="cat-item cat-item-7">
-                    <a href="{% url 'creation' %}" title="A cute little description would go in here">Velaz</a>
+                    <a href="{% url 'creation' %}" title="A cute little description would go in here">Velas</a>
                 </li>
                 <li class="cat-item cat-item-8">
                     <a href="{% url 'creation' %}">Decoracion para el hogar</a>
@@ -155,7 +142,7 @@
                 </li>
             </ul>
         </div>
-        <div class="widget footer"><h4>Gallery</h4>
+        <div class="widget footer"><h4>Galeria</h4>
             <div class="textwidget">
                 <img src="{% static 'core/images/BeFunky-collage.png' %}" alt="">
             </div>

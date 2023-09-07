@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% block title %}Contactos{% endblock %}
+{% block content %}
+<div class="wrap full-wrap">
+    <div class="main-wrap">
+        <section class="main">
+            <article class="post page">
+                <div class="inner">
+                    <h1>Contactame</h1>
+                    <div class="post-content">
+                        <p>Puedes contactar conmigo mediante el siguiente formulario :</p>
+                        {% if 'ok' in request.GET %}
+                        <p>SU MENSAJE SE HA ENVIADO CORRECTAMENTE EN BREVE NOS COMUNICAREMOS</p>
+                        {% elif 'fail' in request.GET %}
+                        <p>Ha ocurrido un error, inténtelo más tarde</p>
+                        {% endif %}
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <p>
+                                {{ contactForm.name.label_tag }} {{ contactForm.name }}
+                                {{ contactForm.name.errors }}
+                            </p>
+                            <p>
+                                {{ contactForm.email.label_tag }} {{ contactForm.email }}
+                                {{ contactForm.email.errors }}
+                            </p>
+                            <p>
+                                {{ contactForm.message.label_tag }} {{ contactForm.message }}
+                                {{ contactForm.message.errors }}
+                            </p>
+                            <p class="form-submit"><input type="submit" value="Enviar"></p>
+                        </form>
+                    </div>
+                </div>
+            </article>
+            <div class="border"></div>
+        </section>
+    </div><!-- /main-wrap -->
+</div><!-- /wrap -->
+{% endblock %}

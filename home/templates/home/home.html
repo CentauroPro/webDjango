@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% block title  %}Inicio{% endblock  %}
+{% block background %}{% load static %}{% endblock  %}
+{% block content %}
+<div class="hero" style="background-image: url('{% static 'core/images/aromas1.jpg' %}'); text-align:right;">
+    <div class="hero-inner">
+        <div class="inner">
+            <h1><span class="border border-top border-bottom">Creando</span></h1>
+            <div class="hero-line-one"></div>
+            <div class="hero-line-two"><span class="border border-bottom"><a href="{% url 'creation' %}" style="color:#FFF;">MG</a></span></div>
+        </div>
+
+        <a class="more-arrow" href=""><i class="fa fa-chevron-down"></i><span>Scroll Down</span></a>
+
+    </div>
+</div>
+
+<div class="wrap full-wrap">
+    <div class="main-wrap">
+      <section class="main main-archive">
+       
+        <div class="loop">
+          <article class="post format-gallery post_format-post-format-gallery">
+            
+            <div class="inner">
+        
+              {% for project in manualidades %}
+              <div class="carousel-container grid-container">
+                <div class="carousel-slide grid-item">
+                    <img src="{{project.image.url}}" alt="Imagen 1">
+                </div>  
+            </div>
+            {% endfor %}
+            
+
+
+
+
+                
+              
+            </div>
+        
+        </div>
+      </section>
+    </div>
+  </div>
+{% endblock %}

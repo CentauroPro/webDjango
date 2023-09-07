@@ -2221,6 +2221,10 @@ html {
 /* Background Colours */
 body, html {
   background-color: #fafbfc;
+  background-image: url('https://img.freepik.com/foto-gratis/marco-plantas-suplies-dibujo_23-2147772349.jpg?w=740&t=st=1693960768~exp=1693961368~hmac=1f39a4b9aef4140e37348899a6a8778ba91b8b36994a106299e63009608e56f3'); /* Ruta relativa a la imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .side .widget, .post, header.header:before, header.header ul ul:before, .comments-wrapper, .author-wrap, .related-posts, .footer-widgets, .home-sticky {
@@ -3694,5 +3698,76 @@ header.header nav,
     height: 50% !important;
   }
 }
+
+/* Estilo para la imagen que girará */
+.textwidget img {
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  height: auto; /* Mantiene la relación de aspecto original de la imagen */
+  border: 2px solid #ccc; /* Agrega un borde a la imagen */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Agrega una sombra a la imagen */
+  animation: rotateEarth 10000s linear infinite; /* Ajusta la duración y repetición de la animación */
+}
+
+/* Definición de la animación de rotación como la Tierra */
+@keyframes rotateEarth {
+  0% { transform: rotate(0deg); } /* Inicio de la rotación */
+  100% { transform: rotate(360deg); } /* Final de la rotación (una vuelta completa) */
+}
+
+/* Estilo para el hover sobre la imagen */
+.textwidget img:hover {
+  transform: scale(1.1); /* Hace que la imagen se agrande ligeramente al hacer hover */
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cambia el número de columnas según tus necesidades */
+  grid-gap: 20px; /* Espacio entre las imágenes */
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+
+.grid-item:hover img {
+  transform: scale(1.1); /* Cambia el valor según el nivel de zoom deseado */
+  transition: transform 0.3s ease; /* Controla la velocidad de la animación */
+}
+.grid-item img {
+  animation: rotate 5s linear forwards;
+  transform-origin: center center;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Estilos para la posición final después de la animación */
+.grid-item img {
+  transform: rotate(360deg);
+}
+
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */

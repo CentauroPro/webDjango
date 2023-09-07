@@ -9,8 +9,8 @@ class Project(models.Model):
     
     
     class Meta:
-        verbose_name="proyecto"
-        verbose_name_plural="proyectos"
+        verbose_name="Creacion"
+        verbose_name_plural="Creaciones"
         ordering=["-created"]
         
     def __str__(self):
