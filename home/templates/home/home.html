@@ -16,32 +16,31 @@
 </div>
 
 <div class="wrap full-wrap">
-    <div class="main-wrap">
-      <section class="main main-archive">
-       
-        <div class="loop">
-          <article class="post format-gallery post_format-post-format-gallery">
-            
-            <div class="inner">
-        
-              {% for project in manualidades %}
-              <div class="carousel-container grid-container">
-                <div class="carousel-slide grid-item">
-                    <img src="{{project.image.url}}" alt="Imagen 1">
-                </div>  
-            </div>
-            {% endfor %}
-            
-
-
-
-
-                
+  <div class="main-wrap">
+    <section class="main main-archive">
+      <div class="loop">
+        <article class="post format-gallery post_format-post-format-gallery">
+          <div class="inner">
+            <div class="home-sticky" id="content">
+              <h2 class="home-sticky-title">Decoraciones</h2>
+              <div class="sticky-inner">
+                {% for project in manualidades %}
+                <aside class="home-sticky-post post has-post-thumbnail sticky">
+                  <span class="post-image">
+                    <a href="#">
+                      {% load static %}
+                      <img  src="{{project.image.url}}"  />
+                    </a>
+                  </span>
               
+                </aside>
+                {% endfor %}
+              </div>
             </div>
-        
-        </div>
-      </section>
-    </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </div>
+</div>
 {% endblock %}
