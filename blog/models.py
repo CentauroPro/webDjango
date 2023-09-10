@@ -22,8 +22,8 @@ class Category(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=255, verbose_name="Titulo")
     image= models.ImageField(verbose_name="Imagen",upload_to="blogs")
-    content = models.TextField(verbose_name="Contenido")
-    quote = models.TextField(verbose_name="Cita", default="“There are always two people in every picture: the photographer and the viewer.” - Ansel Adams")
+    content = RichTextField(verbose_name="Contenido")
+    quote = RichTextField(verbose_name="Cita", default="“There are always two people in every picture: the photographer and the viewer.” - Ansel Adams")
     publicationDate = models.DateTimeField(verbose_name=" fecha de Publicacion", default=now)
     comments = models.IntegerField(verbose_name="Número de Comentarios", default=0)
     author = models.ForeignKey(User, verbose_name="Autor", on_delete=models.CASCADE)
